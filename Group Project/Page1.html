@@ -9,7 +9,7 @@
   </head>
 <body>
 <div class="header">
-  <h1>Something</h1> 
+  <h1>Business Hours and Reservations</h1> 
 </div>
 
 <div class="topnav">
@@ -19,36 +19,63 @@
   <a href="Index.html" style="float:right">Home</a>
 </div>
 <div class="row">
-  <div class="leftcolumn">
+  <div class="item-center">
     <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
+      <h1>Hours of Operation</h1>
+      <h3>Mon-Fri: Lunch 11am-3pm,  Dinner 5pm-10pm</h3>
+	  <h3>Sat: Lunch 11am-3pm,  Dinner 5pm-11pm</h3>
+	  <h3>Sun: Dinner only 4pm-10pm</h3>     
     </div>
     <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
+      <h2>Dinner Reservations</h2>
+      <form>
+	<label for="name">Enter a name: </label>
+	<input type="text" id="name" name="name"><br><br>
+	<label for="number">Enter a phone number: </label>
+	<input type="text" id="number" name="number"><br><br>
+	 
+	<input checked="checked" name="reserve" type="radio" value="5pm" /> 5pm <br />
+	<br>
+	<input name="reserve" type="radio" value="5:30pm" /> 5:30pm <br /> 
+	<br>	
+	<input name="reserve" type="radio" value="6pm" /> 6pm <br />
+	<br>
+	<input name="reserve" type="radio" value="6:30pm" /> 6:30pm<br />
+	<br>
+	<input name="reserve" type="radio" value="7pm" /> 7pm <br />
+	<br>
+	<input name="reserve" type="radio" value="7:30pm" /> 7:30pm <br />
+	<br>
+	<input name="reserve" type="radio" value="8pm" /> 8pm<br />
+	<br>
+	<input name="reserve" type="radio" value="8:30pm" /> 8:30pm <br /> 
+	<br>
+	<input name="reserve" type="radio" value="9pm" /> 9pm <br />
+	<br>
+	<input name="reserve" type="radio" value="9:30pm" /> 9:30pm<br />
+	<br>
+	<input name="reserve" type="radio" value="10pm" /> 10pm <br /> 
+	<br>
+	<button type="button" onclick="displayReservation()">
+        Submit
+    </button>
+	<div id="result"></div>
+      
+    <script>
+        function displayReservation() {
+            var ele = document.getElementsByName('reserve');
+              
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked)
+                document.getElementById("result").innerHTML
+                        = "Your dinner reservation has been submitted for " +ele[i].value;
+            }
+        }
+    </script>
+</form>			
     </div>
   </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>Content</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text..</p>
-    </div>
-    <div class="card">
-      <h3>Content</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-      <h3>Content</h3>
-      <p>Some text..</p>
-    </div>
+  
   </div>
 </div>
 
