@@ -27,5 +27,11 @@ function Reciept()
 	 
 	 var tax = (total * .0975) + total;
    }
-   document.getElementById("total").value = "$" + tax.toFixed(2);
+   document.getElementById("total").value = "$" + tax.toFixed(2); 
 }
+
+// Shopping Cart functionality
+let cartContents = [];
+const cartItemsElement = document.querySelector("#cartItems");
+const cartSum = document.querySelector("#cartSum");
+const menuItem = document.querySelectorAll(".menuItem")
