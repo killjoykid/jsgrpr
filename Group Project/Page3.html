@@ -32,12 +32,12 @@
     <div class="menuBox"
       style="padding: 40px 30px; display: flex; flex-wrap: wrap; gap: 15px 40px; justify-content: center;">
 
-      <div class="card menuItem porkChops">
+      <div class="card foodItem porkChops">
 
-        <div class="menuInfo">
+        <div class="foodInfo">
           <span class="itemName">Pork Chops</span>
-          <img class="menuImg" src="/img/porkchops.jpg">
-          <div>Price</div>
+          <img class="foodImg" src="/img/porkchops.jpg">
+          <div class="price">$22.00</div>
         </div>
 
         <div class="itemDescription">Two thick cut grilled pork chops.
@@ -56,12 +56,12 @@
 
       </div>
 
-      <div id="grilledShrimp" class="card menuItem">
+      <div id="grilledShrimp" class="card foodItem">
 
-        <div class="menuInfo">
+        <div class="foodInfo">
           <span class="itemName">Grilled Shrimp</span>
-          <img class="menuImg" src="/img/grilledshrimp.jpg">
-          <div>Price</div>
+          <img class="foodImg" src="/img/grilledshrimp.jpg">
+          <div class="price">$19.00</div>
         </div>
 
         <div class="itemDescription">Six grilled cajun shrimp on a skewer.
@@ -80,11 +80,11 @@
 
       </div>
 
-      <div class="card menuItem grilledChkSalad">
-        <div class="menuInfo">
+      <div class="card foodItem grilledChkSalad">
+        <div class="foodInfo">
           <span class="itemName">Grilled Chicken Salad</span>
-          <img class="menuImg" src="/img/grilledchickensalad.jpg">
-          <div>Price</div>
+          <img class="foodImg" src="/img/grilledchickensalad.jpg">
+          <div class="price">$13.00</div>
         </div>
         <div class="itemDescription">A crisp refreshing garden salad with grilled chicken and salad dressing of choice.
         </div>
@@ -101,13 +101,13 @@
       </div>
 
 
-      <div class="card menuItem steakburger">
+      <div class="card foodItem steakburger">
 
-        <div class="menuInfo">
+        <div class="foodInfo">
           <span class="itemName">Steakburger</span>
-          <img class="menuImg" src="/img/steakburger.jpg">
-          <div>Price</div>
-        </div>
+          <img class="foodImg" src="/img/steakburger.jpg">
+          <div class="price">$15.00</div>
+                </div>
 
         <div class="itemDescription">A thick angus steak burger with lettuce, tomato,
           american cheese, and mayonaise.
@@ -127,14 +127,33 @@
       </div>
 
 
-      <div class="card menuItem chkTenders">
-        <div class="menuInfo">
+      <div class="card foodItem chkTenders">
+        <div class="foodInfo">
           <span class="itemName">Chicken Tenders</span>
-          <img class="menuImg" src="/img/chickentenders.jpg">
-          <div>Price</div>
-        </div>
+          <img class="foodImg" src="/img/chickentenders.jpg">
+          <div class="price">$16.00</div>
+                </div>
         <div class="itemDescription">Eight crispy fried chicken tenders and dipping
           sauce.</div>
+        <div>
+          <div class="foodMenuButtons">
+            <button class="QtyDecr" onclick="QtyDecrement(this)"><img src="/img/minus-small.png"></button>
+            <span><input class="Qty" type="number" value="1" oninput="validQty(this)"></span>
+            <button class="QtyInc" onclick="QtyIncrement(this)"><img src="/img/plus.png"></button>
+          </div>
+          <div class="foodMenuButtons">
+            <button class="cartButton"><span>Add to Cart</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card foodItem chipsQueso">
+        <div class="foodInfo">
+          <span class="itemName">Spinach Queso & Chips</span>
+          <img class="foodImg" src="/img/spinqueso.jpg">
+          <div class="price">$12.00</div>
+                </div>
+        <div class="itemDescription">A basket of crispy tortilla chips served with a bowl of hot spinach queso for dipping.</div>
         <div>
           <div class="foodMenuButtons">
             <button class="QtyDecr" onclick="QtyDecrement(this)"><img src="/img/minus-small.png"></button>
@@ -208,7 +227,7 @@
   <div class="footer">
     <h3>Copyright "Insert Restaurant Name Here" 2022</h3>
   </div>
-  <script type="text/javascript" src="app.js"></script>      
+  <script type="text/javascript" src="app.js"></script>     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
   </script>
 </body>

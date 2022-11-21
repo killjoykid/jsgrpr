@@ -82,7 +82,7 @@ body {
 
 
 /* Online Ordering styling */
-.menuItem {
+.foodItem {
   width: 250px;
   height: 350px;
   display: flex;
@@ -93,7 +93,7 @@ body {
   border-radius: .75em;
 }
 
-.menuInfo {
+.foodInfo {
   display: flex;
   justify-content: flex-start;
   gap: 5px;
@@ -101,7 +101,7 @@ body {
   flex-flow: column;
 }
 
-.menuImg {
+.foodImg {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -180,11 +180,11 @@ h4 {
 
 /* Online ordering font styling */
 
-.menuItem .itemName {
+.foodItem .itemName {
   font: bold 16px sans-serif;
 }
 
-.menuItem .itemDescription {
+.foodItem .itemDescription {
   font: italic 11px serif;
   color: rgb(88, 88, 88);
   padding-bottom: 10px;
