@@ -35,34 +35,32 @@ const menuItem = document.querySelectorAll(".menuItem")
 
 
 // Page 3 - Online Ordering
-
-const qtyChange = document.getElementsByClassName("Qty");
-
-qtyChange.addEventListener("click", function () {
-
-});
+function validQty(elem) {
+   if ($(elem).val() < 0) $(elem).val(0);
+   else if ($(elem).val() > 99) $(elem).val(99)
+}
 
 // Item quantity decrement
-function QtyDecrement() {
-   var itemQty = $('.menuButtons').find('.Qty').val();
+function QtyDecrement(elem) {
+   var itemQty = $(elem).siblings('span').children('.Qty').val();
    if (itemQty <= 0) {
-      $('.menuButtons').find('.Qty').val(0);
+      $(elem).siblings('span').children('.Qty').val(0);
    }
    else {
       itemQty--;
-      $('.menuButtons').find('.Qty').val(itemQty);
+      $(elem).siblings('span').children('.Qty').val(itemQty);
    }
 }
 
 // Item quantity increment
-function QtyIncrement() {
-   var itemQty = $('.menuButtons').find('.Qty').val();
+function QtyIncrement(elem) {
+   var itemQty = $(elem).siblings('span').children('.Qty').val();
    if (itemQty >= 99) {
-      $('.menuButtons').find('.Qty').val(99);
+      $(elem).siblings('span').children('.Qty').val(99);
    }
    else {
       itemQty++
-      $('.menuButtons').find('.Qty').val(itemQty);
+      $(elem).siblings('span').children('.Qty').val(itemQty);
    }
 }
 
