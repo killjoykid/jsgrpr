@@ -14,15 +14,15 @@ if (new Date().getHours() <= 12) {
 
 // function that adds up checked items and prints a total to the user
 function Reciept() {
-   var input = document.getElementsByName("food");
-   var total = 0;
+   let input = document.getElementsByName("food");
+   let total = 0;
 
-   for (var i = 0; i < input.length; i++) {
+   for (let i = 0; i < input.length; i++) {
       if (input[i].checked) {
          total += parseFloat(input[i].value);
       }
 
-      var tax = (total * .0975) + total;
+      let tax = (total * .0975) + total;
    }
    document.getElementById("total").value = "$" + tax.toFixed(2);
 }
@@ -42,7 +42,7 @@ function validQty(elem) {
 
 // Item quantity decrement
 function QtyDecrement(elem) {
-   var itemQty = $(elem).siblings('span').children('.Qty').val();
+   let itemQty = $(elem).siblings('span').children('.Qty').val();
    if (itemQty <= 0) {
       $(elem).siblings('span').children('.Qty').val(0);
    }
@@ -54,7 +54,7 @@ function QtyDecrement(elem) {
 
 // Item quantity increment
 function QtyIncrement(elem) {
-   var itemQty = $(elem).siblings('span').children('.Qty').val();
+   let itemQty = $(elem).siblings('span').children('.Qty').val();
    if (itemQty >= 99) {
       $(elem).siblings('span').children('.Qty').val(99);
    }
@@ -62,6 +62,14 @@ function QtyIncrement(elem) {
       itemQty++
       $(elem).siblings('span').children('.Qty').val(itemQty);
    }
+}
+
+function AddToCart(elem) {
+   const foodInfo = $(elem).closest('.foodInfo').find('.itemName').text();
+   let foodName = $(elem).closest('.foodItem').find('.itemName');
+   console.log(foodName)
+   let foodImg
+   let foodPrice
 }
 
 
