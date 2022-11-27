@@ -13,12 +13,9 @@
       background-size: cover;
     }
   </style>
-  <!--Spinach Queso & Chips = 12
-        Grilled Chicken Salad = 13
-        Steakburger = 15
-        Chicken Tenders = 16
-        Pork Chops = 22
-        Grilled Shrimp = 19-->
+  <script type="text/javascript" src="app.js"></script>     
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
 </head>
 
 <body>
@@ -49,20 +46,20 @@
         <div class="itemDescription">Two thick cut grilled pork chops.
         </div>
 
-        <div>
+        <form onsubmit="return false">
           <div class="foodMenuButtons">
-            <button class="QtyDecr" onclick="QtyDecrement(this)"><img src="img/minus-small.png"></button>
+            <button type="button" class="QtyDecr" onclick="QtyDecrement(this)"><img src="img/minus-small.png"></button>
             <span><input class="Qty" type="number" value="1" oninput="validQty(this)"></span>
-            <button class="QtyInc" onclick="QtyIncrement(this)"><img src="img/plus.png"></button>
+            <button type="button" class="QtyInc" onclick="QtyIncrement(this)"><img src="img/plus.png"></button>
           </div>
           <div class="foodMenuButtons">
-            <button class="cartButton"><span>Add to Cart</span></button>
+            <button type="submit" class="cartButton" onclick="AddToCart(this)"><span>Update Cart</span></button>
           </div>
-        </div>
+        </form>
 
       </div>
 
-      <div id="grilledShrimp" class="card foodItem">
+      <div class="card foodItem grilledShrimp">
 
         <div class="foodInfo">
           <span class="itemName">Grilled Shrimp</span>
@@ -73,16 +70,16 @@
         <div class="itemDescription">Six grilled cajun shrimp on a skewer.
         </div>
 
-        <div>
+        <form onsubmit="return false">
           <div class="foodMenuButtons">
-            <button class="QtyDecr" onclick="QtyDecrement(this)"><img src="img/minus-small.png"></button>
+            <button type="button" class="QtyDecr" onclick="QtyDecrement(this)"><img src="img/minus-small.png"></button>
             <span><input class="Qty" type="number" value="1" oninput="validQty(this)"></span>
-            <button class="QtyInc" onclick="QtyIncrement(this)"><img src="img/plus.png"></button>
+            <button type="button" class="QtyInc" onclick="QtyIncrement(this)"><img src="img/plus.png"></button>
           </div>
           <div class="foodMenuButtons">
-            <button class="cartButton"><span>Add to Cart</span></button>
+            <button type="submit" class="cartButton" onclick="AddToCart(this)"><span>Update Cart</span></button>
           </div>
-        </div>
+        </form>
 
       </div>
 
@@ -94,16 +91,16 @@
         </div>
         <div class="itemDescription">A crisp refreshing garden salad with grilled chicken and salad dressing of choice.
         </div>
-        <div>
+        <form onsubmit="return false">
           <div class="foodMenuButtons">
-            <button class="QtyDecr" onclick="QtyDecrement(this)"><img src="img/minus-small.png"></button>
+            <button type="button" class="QtyDecr" onclick="QtyDecrement(this)"><img src="img/minus-small.png"></button>
             <span><input class="Qty" type="number" value="1" oninput="validQty(this)"></span>
-            <button class="QtyInc" onclick="QtyIncrement(this)"><img src="img/plus.png"></button>
+            <button type="button" class="QtyInc" onclick="QtyIncrement(this)"><img src="img/plus.png"></button>
           </div>
           <div class="foodMenuButtons">
-            <button class="cartButton"><span>Add to Cart</span></button>
+            <button type="submit" class="cartButton" onclick="AddToCart(this)"><span>Update Cart</span></button>
           </div>
-        </div>
+        </form>
       </div>
 
 
@@ -119,16 +116,16 @@
           american cheese, and mayonaise.
         </div>
 
-        <div>
+        <form onsubmit="return false">
           <div class="foodMenuButtons">
-            <button class="QtyDecr" onclick="QtyDecrement(this)"><img src="img/minus-small.png"></button>
+            <button type="button" class="QtyDecr" onclick="QtyDecrement(this)"><img src="img/minus-small.png"></button>
             <span><input class="Qty" type="number" value="1" oninput="validQty(this)"></span>
-            <button class="QtyInc" onclick="QtyIncrement(this)"><img src="img/plus.png"></button>
+            <button type="button" class="QtyInc" onclick="QtyIncrement(this)"><img src="img/plus.png"></button>
           </div>
           <div class="foodMenuButtons">
-            <button class="cartButton"><span>Add to Cart</span></button>
+            <button type="submit" class="cartButton" onclick="AddToCart(this)"><span>Update Cart</span></button>
           </div>
-        </div>
+        </form>
 
       </div>
 
@@ -141,16 +138,16 @@
         </div>
         <div class="itemDescription">Eight crispy fried chicken tenders and dipping
           sauce.</div>
-        <div>
+        <form onsubmit="return false">
           <div class="foodMenuButtons">
-            <button class="QtyDecr" onclick="QtyDecrement(this)"><img src="img/minus-small.png"></button>
+            <button type="button" class="QtyDecr" onclick="QtyDecrement(this)"><img src="img/minus-small.png"></button>
             <span><input class="Qty" type="number" value="1" oninput="validQty(this)"></span>
-            <button class="QtyInc" onclick="QtyIncrement(this)"><img src="img/plus.png"></button>
+            <button type="button" class="QtyInc" onclick="QtyIncrement(this)"><img src="img/plus.png"></button>
           </div>
           <div class="foodMenuButtons">
-            <button class="cartButton"><span>Add to Cart</span></button>
+            <button type="submit" class="cartButton" onclick="AddToCart(this)"><span>Update Cart</span></button>
           </div>
-        </div>
+        </form>
       </div>
 
       <div class="card foodItem chipsQueso">
@@ -168,7 +165,7 @@
             <button type="button" class="QtyInc" onclick="QtyIncrement(this)"><img src="img/plus.png"></button>
           </div>
           <div class="foodMenuButtons">
-            <button type="submit" class="cartButton" onclick="AddToCart(this)"><span>Add to Cart</span></button>
+            <button type="submit" class="cartButton" onclick="AddToCart(this)"><span>Update Cart</span></button>
           </div>
         </form>
       </div>
@@ -184,6 +181,7 @@
 
 
           <div id="cartItemList">
+
 
             <!-- cartItem Template
 
@@ -203,64 +201,29 @@
         <div>
           <div class="cartSubTitle">
             <div>Subtotal:</div>
-            <div>$0.00</div>
+            <div id="subTot">$0.00</div>
           </div>
           <div class="cartSubTitle">
             <div>Tax: </div>
-            <div>$0.00</div>
+            <div id="taxTot">$0.00</div>
           </div>
           <hr style="border: solid rgb(104, 104, 104) 1px;width:100%;">
           </hr>
           <div class="cartSubTitle"">
             <div>Order Total: </div>
-            <div>$0.00</div>
-          </div>
+            <div id=" orderTot">$0.00</div>
         </div>
-
-      </div>
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="item-center">
-      <div class="card">
-
-        <h3>Menu</h3>
-        <h5>
-          <br>
-          <input name="food" value="5.00" type="checkbox" onclick="Reciept()" />
-          Hamburger - $5.00
-          <br>
-          <input name="food" value="4.00" type="checkbox" onclick="Reciept()" />
-          French Fries - $4.00
-          <br>
-          <input name="food" value="3.00" type="checkbox" onclick="Reciept()" />
-          Soft Drink - $3.00
-          <br>
-          <input name="food" value="4.50" type="checkbox" onclick="Reciept()" />
-          Dessert - $4.50<br>
-
-          <br>
-          Total:
-          <br>
-          <input value="$0.00" readonly="readonly" type="text" id="total" />
-
-        </h5>
-
       </div>
 
     </div>
-
   </div>
+  </div>
+
   </div>
 
   <div class="footer">
     <h3>Copyright "Insert Restaurant Name Here" 2022</h3>
   </div>
-  <script type="text/javascript" src="app.js"></script>     
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-  </script>
 </body>
 
 </html>

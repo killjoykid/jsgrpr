@@ -247,8 +247,8 @@ h4 {
 
 .cartItemInfo {
   display: flex;
-  gap: 8px;
-  flex-grow: 3  ;
+  gap: 10px;
+  flex-grow: 3;
 }
 
 .cartImg img {
@@ -262,12 +262,9 @@ h4 {
 }
 
 .cartName {
- flex: 1 1 100%;
+ flex: 1 1 90%;
 }
 
-.cartPrice {
-
-}
 
 /* Clear floats after the columns */
 .row:after {
